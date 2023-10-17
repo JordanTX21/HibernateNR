@@ -42,7 +42,9 @@ Contributor(s):
 <hibernate-configuration>
   <session-factory>
     <!-- Dialecto de la base de datos -->
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <!-- Dialecto de la base de datos -->
+    <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
     <!-- parámetros para la conexion a la base de datos -->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dsHibernateNR</property>
@@ -55,5 +57,9 @@ Contributor(s):
     <property name="hibernate.hbm2ddl.auto">create-drop</property>
     <!-- Archivos de mapeo, que se agregará este código automáticamente cuando se llegue a crear de manera visual -->
     <mapping resource="mapeo/Empleado.hbm.xml"/>
+    <mapping resource="mapeo/Direccion.xml"/>
+    <mapping resource="mapeo/Persona.xml"/>
+    <mapping resource="mapeo/Pais.xml"/>
+    <mapping resource="mapeo/Presidente.xml"/>
   </session-factory>
 </hibernate-configuration>
