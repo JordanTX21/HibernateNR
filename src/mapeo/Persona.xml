@@ -42,11 +42,19 @@ Contributor(s):
 <hibernate-mapping>
     <class name="modelo.Persona" table="PERSONAS">
         <id name="id" column="ID">
-            <generator class="foreign">
+            <generator class="identity" />
+            <!--<generator class="foreign">
                 <param name="property">direccion</param>
-            </generator>
+            </generator>-->
         </id>
         <property name="nombre"/>
-        <one-to-one name="direccion" cascade="persist,delete"/>
+        <property name="edad"/>
+        <!--<one-to-one name="direccion" cascade="persist,delete"/>-->
+        
+        <list name="libros" cascade="all-delete-orphan">
+            <key column="ID_PERSONA" />
+            <index column="ORDEN" />
+            <one-to-many class="modelo.Libro" />
+        </list>
     </class>
 </hibernate-mapping>

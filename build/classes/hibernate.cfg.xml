@@ -61,5 +61,6 @@ Contributor(s):
     <mapping resource="mapeo/Persona.xml"/>
     <mapping resource="mapeo/Pais.xml"/>
     <mapping resource="mapeo/Presidente.xml"/>
+    <mapping resource="mapeo/Libro.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
